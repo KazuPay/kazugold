@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=KazuGold
+Comment=KazuGold P2P Cryptocurrency
+Comment[fr]=KazuGold, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=KazuGold, eşten eşe kriptografik sanal para birimi
+Exec=kazugold-qt %u
+Terminal=false
+Type=Application
+Icon=kazugold128
+MimeType=x-scheme-handler/kazugold;
+Categories=Office;Finance;

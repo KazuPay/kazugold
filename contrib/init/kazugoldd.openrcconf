@@ -1,0 +1,33 @@
+# /etc/conf.d/kazugoldd: config file for /etc/init.d/kazugoldd
+
+# Config file location
+#KGLDCOIND_CONFIGFILE="/etc/kazugold/kazugold.conf"
+
+# What directory to write pidfile to?  (created and owned by $KGLDCOIND_USER)
+#KGLDCOIND_PIDDIR="/var/run/kazugoldd"
+
+# What filename to give the pidfile
+#KGLDCOIND_PIDFILE="${KGLDCOIND_PIDDIR}/kazugoldd.pid"
+
+# Where to write kazugoldd data (be mindful that the blockchain is large)
+#KGLDCOIND_DATADIR="/var/lib/kazugoldd"
+
+# User and group to own kazugoldd process
+#KGLDCOIND_USER="kazugold"
+#KGLDCOIND_GROUP="kazugold"
+
+# Path to kazugoldd executable
+#KGLDCOIND_BIN="/usr/bin/kazugoldd"
+
+# Nice value to run kazugoldd under
+#KGLDCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+KGLDCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for kazugoldd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+KGLDCOIND_SIGTERM_TIMEOUT=60
