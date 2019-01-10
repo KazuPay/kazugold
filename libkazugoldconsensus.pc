@@ -1,0 +1,11 @@
+prefix=/root/kazugold/depends/x86_64-w64-mingw32
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: KazuGold Core consensus library
+Description: Library for the KazuGold consensus protocol.
+Version: 1.0.1
+Libs: -L${libdir} -lkazugoldconsensus
+Cflags: -I${includedir}
+Requires.private: libcrypto
