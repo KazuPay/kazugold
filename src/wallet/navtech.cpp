@@ -108,7 +108,7 @@ UniValue Navtech::FindAnonServer(std::vector<anonServer> anonServers, CAmount nV
   int randIndex = rand() % anonServers.size();
 
   string readBuffer;
-
+/*
   curl_global_init(CURL_GLOBAL_ALL);
   curl = curl_easy_init();
 
@@ -174,6 +174,7 @@ UniValue Navtech::FindAnonServer(std::vector<anonServer> anonServers, CAmount nV
     curl_global_cleanup();
     throw runtime_error("CURL unavailable");
   }
+*/
 }
 
 UniValue Navtech::ParseJSONResponse(string readBuffer) {
@@ -263,7 +264,7 @@ bool Navtech::TestEncryption(string encrypted, UniValue serverData) {
   UniValue port = find_value(serverData, "server_port");
 
   string readBuffer;
-
+/*
   curl_global_init(CURL_GLOBAL_ALL);
   curl = curl_easy_init();
 
@@ -304,9 +305,11 @@ bool Navtech::TestEncryption(string encrypted, UniValue serverData) {
   }
   curl_global_cleanup();
   throw runtime_error("TestEncryption End of Function");
+*/
 }
 
 UniValue Navtech::GetServerInfo(std::string server) {
+/*
   curl_global_init(CURL_GLOBAL_ALL);
   curl = curl_easy_init();
   string readBuffer;
@@ -357,4 +360,5 @@ UniValue Navtech::GetServerInfo(std::string server) {
     curl_global_cleanup();
     throw runtime_error("CURL unavailable");
   }
+*/
 }
